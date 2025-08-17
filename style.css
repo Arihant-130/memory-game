@@ -178,4 +178,23 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
+
+}
+/* Credit line / footer styling */
+.credit {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+.credit span {
+  color: #e91e63; /* Love vibe color */
+  font-weight: bold;
+}
+
+.credit:hover {
+  color: #000;
+  transition: 0.3s;
 }
