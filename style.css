@@ -1,0 +1,181 @@
+/* ----- Global Styles ----- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* All screens hidden by default */
+.dn {
+  display: none;
+}
+
+/* Center all screens */
+.loading-screen,
+.tap-screen,
+.hii-screen,
+.ihave-screen,
+.game-screen,
+.loss,
+.win,
+.end {
+  text-align: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ----- Buttons ----- */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(255, 0, 255, 0.6);
+}
+
+/* ----- Game Board ----- */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ----- circul ----- */
+/* ----- Circular Container (same size everywhere) ----- */
+.circul {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+/* Image inside circle auto-fit kare */
+.circul img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+
+/* ----- Cards ----- */
+.card {
+  width: 100px;
+  height: 120px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Card Front */
+.card .front {
+  background: #0f3460;
+  color: #fff;
+  border: 2px solid #ff00cc;
+}
+
+/* Card Back */
+.card .back {
+  background: #e94560;
+  transform: rotateY(180deg);
+  color: #fff;
+  border: 2px solid #00f0ff;
+}
+
+/* Flip Animation */
+.card.flip .front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .back {
+  transform: rotateY(0deg);
+}
+
+/* Glow Effect for matched cards */
+.card.matched {
+  box-shadow: 0 0 20px 5px #00ff99;
+  transform: scale(1.05);
+}
+
+/* ----- Timer ----- */
+#timer {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+/* ----- Love Loading Lines ----- */
+.love-line {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #ff6ec7;
+  animation: slideUp 0.4s ease;
+}
+
+/* ----- Animations ----- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

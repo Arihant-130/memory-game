@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- All Screens inside one container -->
+  <div class="gamescreens">
+
+    <!-- Loading Screen -->
+    <div class="loading-screen dn fit">
+      <h4>Hiee there! <br>Please wait a moment..</h4>
+    </div>
+
+    <!-- Tap to Start Screen -->
+    <div class="tap-screen dn fit">
+      <div class="circul cp">
+        <img src="/img/tap.gif" alt="Cute Cat">
+      </div>
+      <h4>Tap to Start the Game!</h4>
+    </div>
+
+    <!-- Greeting Screen -->
+    <div class="hii-screen dn fit">
+      <div class="circul">
+        <img src="/img/hii.gif" alt="Cute Cat">
+      </div>
+      <h4>Hii BBG</h4>
+    </div>
+
+    <!-- "I Have Something" Screen -->
+    <div class="ihave-screen dn fit">
+      <div class="circul">
+        <img src="/img/wating.gif" alt="Cute Cat">
+      </div>
+      <h4>I have something for you...</h4>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div class="game-screen dn fit">
+      <h4>Try to finish this memory game!</h4>
+      <!-- Timer -->
+      <div id="timer">Time: 40s</div>
+      <!-- Game Board -->
+      <div id="game-board"></div>
+    </div>
+
+    <!-- Loss Screen -->
+    <div class="loss dn fit">
+      <h4 style="color:#ff4d6d;">Oh no… you broke my heart 😿</h4>
+      <img src="img/sad.gif" alt="Sad Cat"
+        style="width:200px; border-radius:12px; margin:10px 0;">
+      <br>
+      <button class="retry-btn">One more chance 🥺</button>
+    </div>
+
+    <!-- Win Screen -->
+    <div class="win dn fit">
+      <div class="circul">
+        <img src="/img/wine.gif" alt="Cute Cat">
+      </div>
+      <h4>Wow! You are smart! Wait a moment...</h4>
+    </div>
+
+    <!-- End Screen -->
+    <div class="end dn fit">
+      <div class="circul">
+        <img src="/img/end.gif" alt="Cute Cat">
+      </div>
+      <!-- Dynamic "I Love You %" Lines -->
+      <div class="lovelod">
+        <b>I love you 10%</b>
+      </div>
+      <h4>
+        Love you my dearest, the sweetest, the funniest, the cutest. <br>
+        Stay healthy, my love.
+      </h4>
+      <button>Continue</button>
+    </div>
+
+  </div> <!-- ./gamescreens -->
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
